@@ -200,9 +200,9 @@ export const signTransaction = async (
   node: BIP32Interface
 ): Promise<SignedTransactionData> => {
 
-  await psbt.signAllInputsHD(node);
-  await psbt.validateSignaturesOfAllInputs(validator);
-  await psbt.finalizeAllInputs();
+  psbt.signAllInputsHD(node);
+  psbt.validateSignaturesOfAllInputs(validator);
+  psbt.finalizeAllInputs();
 
   const tx: Transaction = psbt.extractTransaction();
 

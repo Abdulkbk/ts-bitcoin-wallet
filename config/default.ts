@@ -10,5 +10,6 @@ export default {
   rpc_user: process.env.RPC_USER,
   rpc_password: process.env.RPC_PASSWORD,
   signet_port: process.env.SIGNET_PORT,
+  testnet_port: process.env.TESTNET_PORT,
 }
 
